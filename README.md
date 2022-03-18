@@ -1,2 +1,8 @@
 # TDA_grenoble
 Topological Data Analysis for Brain Network Exploration
+
+## Context
+Network models are currently used in different contexts of application due to the possibility of representing data and theirinterconnections in an intuitive way. Topological Data Analysis (TDA) provides a set of emerging tools to describe struc-tured data, such as networks. For instance, Betti numbers and persistent homology are gaining attention in a wide variety of fields with encouraging results both on the characterization of different graph models and on real-world data [2, 3]. For these reasons, we would like to apply these approaches in the context of brain functional connectivity to extend current state-of-the-art results. In neuroscience, network models can depict the system of connections among regions of the brain [1]. These networks can be leveraged to analyze the brain under diverse conditions, such as in comatose or anesthetized subjects, or to determine discriminant network features. Brain functional connectivity networks usually exhibit small-world properties that will be refined during this internship. In addition, during the network extraction process, edges might be identified incorrectly. The impact of these spu- rious edges on the topology of the graphs will be evaluated in the second part of the internship.
+
+## Task
+Determine an interval of costs (i.e., sparsity values) where the connectivity graph is a small- world according to a metric on the corresponding barcodes (we compute a barcode per sparsity value, c.f. [3]), similarly to [1] with global and local efficiency. This metric can either be a summary of the barcode or a distance between the barcode of a given graph and that of a small-world network.
