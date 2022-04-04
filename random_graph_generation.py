@@ -115,6 +115,21 @@ def generate_ring_lattice_correlation_matrix(n, seed=np.nan):
 ###
 
 # auxiliary functions
+
+
+def closest_nodes(n,dist,upper=False,non_diag=True):
+  
+    nodes=np.arange(n)
+    col,row=np.meshgrid(nodes,nodes)
+
+    closest=np.logical_or(np.abs(col-row)<=dist,np.abs(col-row)>=n-dist)
+    if non_diag:
+        closest=np.logical_and(closest, col!=row)
+    if not upper:
+        return  closest
+  
+    return np.logical_and(closest, col>row)
+
 def old_nodes(old_graph, upper=False):
     n=len(old_graph)
     nodes=np.arange(n)
